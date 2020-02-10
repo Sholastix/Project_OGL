@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>articleCreate</title>
+    <style>
+        .field {
+            width: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Добавление новой статьи</h2>
+    <form action="/articles/articleCreate" method="POST">
+        <label>Name</label><br>
+        <input type="text" name="name" /><br><br>
+        <label>Content</label><br>
+        <input type="text" name="content" /><br><br>
+        <label>
+            Category:<br><br>
+            1 - первые блюда<br>
+            2 - вторые блюда<br>
+            3 - десерты<br>
+            4 - напитки<br>
+            5 - выпечка<br>
+        </label><br>
+        <input type="number" min="1" max="5" value="1" name="categoryId" /><br><br>
+        <!-- Дополнительные поля добавляем аналогично. -->
+        <input type="submit" value="Send" />
+    </form>
+</body>
+
+</html>

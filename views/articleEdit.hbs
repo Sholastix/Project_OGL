@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>articleEdit</title>
+    <style>
+        .field {
+            width: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Редактирование существующей статьи</h2>
+    <form method="POST" action="/articles/articleEdit/{{this.id}}?_method=PUT">
+        <input type="hidden" name="id" value="{{article.id}}" />
+        <label>Name</label><br>
+        <input type="text" name="name" value="{{article.name}}" class="field" /><br><br>
+        <label>Content</label><br>
+        <input type="text" name="content" value="{{article.content}}" class="field" /><br><br>
+        <input type="submit" value="Send" />
+    </form>
+    <p><a href="/articles">Возврат к странице "Статьи"</a></p><br>
+    <p><a href="/main">HOMEPAGE</a></p>
+</body>
+
+</html>

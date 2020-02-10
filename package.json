@@ -1,0 +1,28 @@
+{
+    "name": "project_ogl",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon app.js",
+        "linter": "eslint .",
+        "db:create": "node scripts/createDB.js"
+    },
+    "author": "Sholastix",
+    "license": "ISC",
+    "devDependencies": {
+        "eslint": "^6.8.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-plugin-import": "^2.19.1",
+        "nodemon": "^2.0.2",
+        "sequelize-cli": "^5.5.1"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "hbs": "^4.1.0",
+        "method-override": "^3.0.0",
+        "mysql2": "^2.1.0",
+        "sequelize": "^5.21.3"
+    }
+}

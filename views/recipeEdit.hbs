@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>recipeEdit</title>
+    <style>
+        .field {
+            width: 180px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Редактирование существующего рецепта</h2>
+    <form method="POST" action="/recipes/recipeEdit/{{this.id}}?_method=PUT">
+        <input type="hidden" name="id" value="{{recipe.id}}" />
+        <label>Name</label><br>
+        <input type="text" name="name" value="{{recipe.name}}" class="field" /><br><br>
+        <label>Content</label><br>
+        <input type="text" name="content" value="{{recipe.content}}" class="field" /><br><br>
+        <input type="submit" value="Send" />
+    </form>
+    <p><a href="/recipes">Возврат к странице "Рецепты"</a></p><br>
+    <p><a href="/main">HOMEPAGE</a></p>
+</body>
+
+</html>
