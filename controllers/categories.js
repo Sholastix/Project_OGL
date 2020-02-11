@@ -44,8 +44,6 @@ const remove = (req, res) => {
 
 module.exports = {
     getAll,
-    // getAllArticlesById,
-    // getAllRecipesById,
     getCreate,
     create,
     getUpdate,
