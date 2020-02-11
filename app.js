@@ -1,6 +1,6 @@
 const express = require('express');
 
-const db = require('./config/database'); // ОСТАВЛЯЕМ БЕЗ ИЗМЕНЕНИЙ.
+const db = require('./config/database');
 
 const app = express();
 require('./routes/mainRoute')(app);
