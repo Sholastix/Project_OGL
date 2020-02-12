@@ -27,15 +27,11 @@ Category.hasMany(Article, {
     },
 });
 
-Article.belongsTo(Category);
-
 Category.hasMany(Recipe, {
     onDelete: 'cascade',
     foreignKey: {
         allowNull: false,
     },
 });
-
-Recipe.belongsTo(Category);
 
 module.exports = Category;
