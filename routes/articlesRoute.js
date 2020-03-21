@@ -10,7 +10,7 @@ module.exports = (app) => {
     app.use(methodOverride('_method'));
 
     // ПОЛУЧЕНИЕ полного списка статей по запросу.
-    app.get('/articles', articles.getAll);
+    app.get('/articles/', articles.getAll);
 
     // ПОЛУЧЕНИЕ по ID категории полного списка статей этой категории (проверка через POSTMAN).
     app.get('/categories/articles/:id', articles.getAllByCatId);

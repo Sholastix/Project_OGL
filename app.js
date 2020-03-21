@@ -1,5 +1,5 @@
 const express = require('express');
-
+require('./config/createDB').createDB();
 const db = require('./config/database');
 
 const app = express();
@@ -12,8 +12,11 @@ require('./routes/articlesRoute')(app);
 app.set('view engine', 'hbs');
 
 // Cинхронизация с БД, при успешной синхронизации запускаем сервер.
+const PORT = 3000;
+
 db.sync().then(() => {
-    app.listen(3000, () => {
-        console.log('Server listening on port 3000.');
+    app.listen(PORT, () => {
+        console.log(`Server listening on port ${PORT}.`);
     });
-}).catch((err) => console.log(err));
+})
+.catch((err) => console.log(err));

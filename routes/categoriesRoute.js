@@ -10,7 +10,7 @@ module.exports = (app) => {
     app.use(methodOverride('_method'));
 
     // ПОЛУЧЕНИЕ полного списка категорий по запросу.
-    app.get('/categories', categories.getAll);
+    app.get('/categories/', categories.getAll);
 
     // ДОБАВЛЕНИЕ в список новых категорий.
     app.get('/categories/categoryCreate', categories.getCreate);

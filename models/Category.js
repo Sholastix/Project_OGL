@@ -1,8 +1,8 @@
 const Sequelize = require('sequelize');
 
 const db = require('../config/database');
-const Article = require('../models/Article');
-const Recipe = require('../models/Recipe');
+const Article = require('./Article');
+const Recipe = require('./Recipe');
 
 // Создаём модель Categorie для БД.
 const Category = db.define('category', {

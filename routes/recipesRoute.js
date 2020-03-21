@@ -10,7 +10,7 @@ module.exports = (app) => {
     app.use(methodOverride('_method'));
 
     // ПОЛУЧЕНИЕ полного списка рецептов по запросу.
-    app.get('/recipes', recipes.getAll);
+    app.get('/recipes/', recipes.getAll);
 
     // ПОЛУЧЕНИЕ по ID категории полного списка рецептов этой категории (проверка через POSTMAN).
     app.get('/categories/recipes/:id', recipes.getAllByCatId);

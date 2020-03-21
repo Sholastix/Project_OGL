@@ -10,22 +10,27 @@
 <body>
     <h2>Рецепты</h2>
     <table>
-        <tr>
-            <th>Name</th>
-            <th>Content</th>
-        </tr>
-        {{#each recipes}}
-        <tr>
-            <td>{{this.name}}</td>
-            <td>{{this.content}}</td>
-            <td>
-                <a href="/recipes/recipeEdit/{{this.id}}">Edit</a>|
-                <form method="POST" action="/recipes/delete/{{this.id}}?_method=DELETE" style="display:inline;">
-                    <input type="submit" value="Delete" />
-                </form>
-            </td>
-        </tr>
-        {{/each}}
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Content</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#each recipes}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>{{this.content}}</td>
+                <td>
+                    <a href="/recipes/recipeEdit/{{this.id}}">Edit</a>|
+                    <form method="POST" action="/recipes/delete/{{this.id}}?_method=DELETE" style="display:inline;">
+                        <input type="submit" value="Delete" />
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
     </table>
     <p><a href="/recipes/recipeCreate/">Create New Recipe</a></p><br>
     <p><a href="/main">HOMEPAGE</a></p>

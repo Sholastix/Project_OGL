@@ -11,20 +11,25 @@
 <body>
     <h2>Категории</h2>
     <table>
-        <tr>
-            <th>Name</th>
-        </tr>
-        {{#each categories}}
-        <tr>
-            <td>{{this.name}}</td>
-            <td>
-                <a href="/categories/categoryEdit/{{this.id}}">Edit</a>|
-                <form method="POST" action="/categories/delete/{{this.id}}?_method=DELETE" style="display:inline;">
-                    <input type="submit" value="Delete" />
-                </form>
-            </td>
-        </tr>
-        {{/each}}
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {{#each categories}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>
+                    <a href="/categories/categoryEdit/{{this.id}}">Edit</a>|
+                    <form method="POST" action="/categories/delete/{{this.id}}?_method=DELETE" style="display:inline;">
+                        <input type="submit" value="Delete" />
+                    </form>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
     </table>
     <p><a href="/categories/categoryCreate/">Create New Category</a></p><br>
     <p><a href="/main">HOMEPAGE</a></p>
